@@ -1,0 +1,29 @@
+//**** A function which adds the url for an asset automatically ****\\
+/// Base path for assets (fonts, images...),
+/// should not include trailing slash
+$asset-base-path: '' !default;
+
+/// Asset URL builder
+@function asset($type, $filename) {
+  @return url(#{$asset-base-path}/#{$type}/#{$filename});
+}
+/// Image asset helper
+@function img($filename) {
+  @return asset('assets', $filename);
+}
+/// Font asset helper
+@function font($filename) {
+  @return asset('fonts', $filename);
+}
+
+//...........................||...................................\\
+/// A Z-indexes map  which gathers all Z layers of the application
+$z-indexes: (
+  'modal': 5000,
+  'dropdown': 4000,
+  'default': 1,
+  'below': -1,
+);
+@function z($layer) {
+  @return map-get($z-indexes, $layer);
+}

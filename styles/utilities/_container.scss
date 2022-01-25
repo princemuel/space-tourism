@@ -1,0 +1,8 @@
+@use '../abstracts/mq-manager' as mq;
+/*********** CONTAINER ************/
+
+.container {
+  max-width: var(--max-width, 60ch);
+  padding-inline: var(--spacer, 2em);
+  margin-inline: auto;
+}

@@ -1,0 +1,28 @@
+/*********** ANIMATIONS ************/
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,36 @@
+/* -------------------------------- */
+/* LAYOUT                           */
+/* -------------------------------- */
+@use '../abstracts' as *;
+
+.layout {
+  // display: grid;
+  // grid-template-rows: 7rem min-content;
+
+  // grid-template-columns:
+  //   [full-start] minmax(3rem, 1fr) [center-start] repeat(
+  //     8,
+  //     [col-start] minmax(min-content, 15rem) [col-end]
+  //   )
+  //   [center-end] minmax(3rem, 1fr) [full-end];
+}
+
+.header {
+  background: burlywood;
+  // grid-column: full-start / full-end;
+  // grid-row: 1 / span 1;
+}
+
+.main {
+  background: palevioletred;
+  // grid-column: full-start / full-end;
+  // grid-row: 2 / -1;
+
+  // display: grid;
+  // grid-template-columns:
+  //   [full-start] minmax(3rem, 1fr) [center-start] repeat(
+  //     8,
+  //     [col-start] minmax(min-content, 15rem) [col-end]
+  //   )
+  //   [center-end] minmax(3rem, 1fr) [full-end];
+}

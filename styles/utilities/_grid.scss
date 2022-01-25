@@ -1,0 +1,27 @@
+@use '../abstracts/' as *;
+
+/*********** GRID ************/
+%grid {
+  display: grid;
+  gap: var(--gap, var(--spacer));
+}
+
+@mixin grid($g-rows: null, $g-cols: null) {
+  @extend %grid;
+  grid-template-rows: $g-rows;
+  grid-template-columns: $g-cols;
+}
+
+@mixin grid-child(
+  $col-start: null,
+  $col-end: null,
+  $row-start: null,
+  $row-end: null
+) {
+  grid-column: #{$col-start}/#{$col-end};
+  grid-row: #{$row-start}/#{$row-end};
+}
+
+// body {
+//   @include grid(repeat(3, 1fr), repeat(3, 1fr));
+// }

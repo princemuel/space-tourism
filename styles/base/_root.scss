@@ -1,0 +1,57 @@
+/* -------------------------------- */
+/* BASE                             */
+/* -------------------------------- */
+
+@use '../abstracts' as *;
+/*!Theme Name:
+Theme URI: https://
+Repository: https://github.com/pHoeniX-svg/space-tourism-fm
+Description: A Space Tourism project from frontend mentor challeges
+Author's Name: Chukwuzube Samuel
+Author's Moniker: pHoeniX-svg
+Version: 01
+*/
+
+/* ////////////////////////////////////////////
+// BASE CONFIGURATION
+*/
+:root {
+  // outputs the theme colors as css variables
+
+  @each $color, $shade in $colors {
+    --clr-#{$color}: #{$shade};
+  }
+
+  // outputs the font-weights as css custom variables
+  @each $weight, $value in $font-weights {
+    --fw-#{$weight}: #{$value};
+  }
+
+  // outputs the font-sizes as css custom variables
+  @each $screen-size, $property in $type-scale {
+    @if $screen-size == small {
+      @each $prop, $value in $property {
+        --fs-#{$prop}: #{$value};
+      }
+    } @else if $screen-size == medium {
+      @include media('>=pad', 'screen') {
+        @each $prop, $value in $property {
+          --fs-#{$prop}: #{$value};
+        }
+      }
+    } @else {
+      @include media('>=desk', 'screen') {
+        @each $prop, $value in $property {
+          --fs-#{$prop}: #{$value};
+        }
+      }
+    }
+  }
+  --ff-sans: #{$ff-sans};
+  --ff-serif: #{$ff-serif};
+  --ff-sans-cond: #{$ff-sans-cond};
+  --spacing: 0.02em;
+  --b-radius: 0.8rem;
+  --transition: all 0.2s ease-in;
+  --max-width: 128rem;
+}

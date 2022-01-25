@@ -1,0 +1,37 @@
+@use '../abstracts/' as *;
+
+/*********** FLEX ************/
+%flex {
+  display: flex;
+  gap: var(--gap, var(--spacer));
+}
+
+@mixin flex($align: null, $justify: null, $flex-direction: null, $wrap: null) {
+  @extend %flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+
+.flex {
+  @extend %flex;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: var(--width, 80rem);
+
+  @media (min-width: 60em) {
+    flex-direction: row;
+  }
+
+  & > * + * {
+    margin: var(--spacer) 0 0 0;
+    @media (min-width: 60em) {
+      margin: 0 0 0 var(--spacer);
+    }
+  }
+}
