@@ -1,4 +1,27 @@
 @use '../abstracts' as *;
+
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-weight: var(--fw-400);
+}
+
 body {
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+  font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
 }

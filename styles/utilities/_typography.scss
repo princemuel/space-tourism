@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+.ff-sans-cond {
+  font-family: var(--ff-sans-cond);
+}
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+}
+
+.ls-1 {
+  letter-spacing: 4.75px;
+}
+.ls-2 {
+  letter-spacing: 2.7px;
+}
+.ls-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@each $screen-size, $property in $type-scale {
+  @each $prop, $value in $property {
+    .fs-#{$prop} {
+      font-size: var(--fs-#{$prop});
+    }
+  }
+}
