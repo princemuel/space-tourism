@@ -3,11 +3,6 @@
 
 body {
   position: relative;
-  color: hsl(var(--clr-light));
-  background-color: hsl(var(--clr-dark));
-  // background-image: img('/crew/background-crew-mobile.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

@@ -3,19 +3,8 @@
 /* Set core root defaults */
 html {
   box-sizing: border-box;
-  font-size: 50%;
+  font-size: 62.5%;
   text-rendering: optimizeSpeed;
-
-  @include media('>=tab', '<pad', 'screen') {
-    font-size: 56.25%;
-  }
-  @include media('>=pad', '<large', 'screen') {
-    font-size: 62.5%;
-  }
-  @include media('>=large', 'screen') {
-    font-size: 75%;
-  }
-
   &,
   &:focus-within {
     scroll-behavior: smooth;
@@ -40,33 +29,18 @@ picture {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-weight: var(--fw-400);
-}
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
 /* Make images easier to work with */
-img:not(.logo),
-picture:not(.logo) {
-  max-width: 100%;
-}
-
 img,
 picture {
   height: auto;
   display: block;
+  max-width: 100%;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -80,27 +54,12 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-a:not(.btn) {
-  &:link,
-  &:visited {
-    text-decoration: none;
-    color: currentColor;
-  }
-
-  &:hover,
-  &:focus {
-    -webkit-text-decoration-color: var(--clr-accent);
-    text-decoration-color: var(--clr-accent);
-  }
-}
-
 /* Inherit fonts for inputs and buttons */
 button,
 input,
 select,
 textarea {
   font: inherit;
-  outline: none;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

@@ -18,13 +18,13 @@ Version: 01
 :root {
   // outputs the theme colors as css variables
 
-  @each $color, $shade in $colors {
-    --clr-#{$color}: #{$shade};
+  @each $prop, $value in $colors {
+    --clr-#{"" + $prop}: #{$value};
   }
 
   // outputs the font-weights as css custom variables
-  @each $weight, $value in $font-weights {
-    --fw-#{$weight}: #{$value};
+  @each $prop, $value in $font-weights {
+    --fw-#{$prop}: #{$value};
   }
 
   // outputs the font-sizes as css custom variables
@@ -53,5 +53,4 @@ Version: 01
   --spacing: 0.02em;
   --b-radius: 0.8rem;
   --transition: all 0.2s ease-in;
-  --max-width: 128rem;
 }

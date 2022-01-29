@@ -20,18 +20,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
     />
 
     <title>Design system</title>
     <link rel="stylesheet" href="./styles/index.scss" />
   </head>
-  <body>
-    00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space
-    Let’s face it; if you want to go to space, you might as well genuinely go to
-    outer space and not hover kind of on the edge of it. Well sit back, and
-    relax because we’ll give you a truly out of this world experience! Explore
+  <body class="bg-dark text-white">
+    <div class="container">
+      <h1>Design System</h1>
+
+      <section id="colors">
+        <h2><span>01</span> colors</h2>
+
+        <div class="flex">
+          <div>
+            <div
+              class="bg-dark text-white"
+              style="padding: 3rem 1rem 1rem; border: 1px solid white"
+            >
+              #0B0D17
+            </div>
+            <p><span class="text-accent">RGB</span> 11, 13, 23</p>
+            <p><span class="text-accent">HSL</span> 230°, 35%, 7%</p>
+          </div>
+          <div>
+            <div
+              class="bg-accent text-dark"
+              style="padding: 3rem 1rem 1rem; border: 1px solid white"
+            >
+              #D0D6F9
+            </div>
+            <p><span class="text-accent">RGB</span> 208, 214, 249</p>
+            <p><span class="text-accent">HSL</span> 231°, 77%, 90%</p>
+          </div>
+          <div>
+            <div
+              class="bg-white text-dark"
+              style="padding: 3rem 1rem 1rem; border: 1px solid white"
+            >
+              #FFFFFF
+            </div>
+            <p><span class="text-accent">RGB</span> 255, 255, 255</p>
+            <p><span class="text-accent">HSL</span> 0°, 0%, 100%</p>
+          </div>
+        </div>
+      </section>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

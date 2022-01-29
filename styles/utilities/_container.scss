@@ -2,7 +2,7 @@
 /*********** CONTAINER ************/
 
 .container {
-  max-width: var(--max-width, 60ch);
-  padding-inline: var(--spacer, 2em);
+  max-width: var(--max-width, 128rem);
   margin-inline: auto;
+  padding-inline: var(--spacer, 2em);
 }
