@@ -29,16 +29,16 @@
   </head>
   <body>
     <div class="container">
-      <h1>Design System</h1>
+      <h1 class="uppercase">Design system</h1>
 
-      <section id="colors">
-        <h2><span>01</span> colors</h2>
-
+      <!-- DESIGN_SYSTEM: COLORS -->
+      <section id="colors" style="margin: 4rem 0">
+        <h2 class="numbered-title"><span>01 </span>colors</h2>
         <div class="flex">
           <div style="flex-grow: 1">
             <div
-              class="bg-dark text-white"
-              style="padding: 4.8rem 1.6rem 1.6rem; border: 1px solid white"
+              class="bg-dark text-white ff-serif fs-500"
+              style="padding: 4.8rem 1.6rem; border: 1px solid white"
             >
               #0B0D17
             </div>
@@ -47,8 +47,8 @@
           </div>
           <div style="flex-grow: 1">
             <div
-              class="bg-accent text-dark"
-              style="padding: 4.8rem 1.6rem 1.6rem; border: 1px solid white"
+              class="bg-accent text-dark ff-serif fs-500"
+              style="padding: 4.8rem 1.6rem; border: 1px solid white"
             >
               #D0D6F9
             </div>
@@ -57,13 +57,113 @@
           </div>
           <div style="flex-grow: 1">
             <div
-              class="bg-white text-dark"
-              style="padding: 4.8rem 1.6rem 1.6rem; border: 1px solid white"
+              class="bg-white text-dark ff-serif fs-500"
+              style="padding: 4.8rem 1.6rem; border: 1px solid white"
             >
               #FFFFFF
             </div>
             <p><span class="text-accent">RGB</span> 255, 255, 255</p>
             <p><span class="text-accent">HSL</span> 0°, 0%, 100%</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESIGN_SYSTEM: TYPOGRAPHY -->
+      <section id="typography" style="margin: 4rem 0">
+        <h2 class="numbered-title"><span>02 </span>Typography</h2>
+        <div class="flex">
+          <div class="flow" style="flex-basis: 100%; --flow-space: 2rem">
+            <div>
+              <p class="text-accent">Heading 1 - Bellefair Regular - 150px</p>
+              <p class="fs-900 ff-serif uppercase">Earth</p>
+            </div>
+            <div>
+              <p class="text-accent">Heading 2 - Bellefair Regular - 100px</p>
+              <p class="fs-800 ff-serif uppercase">Venus</p>
+            </div>
+            <div>
+              <p class="text-accent">Heading 3 - Bellefair Regular - 56px</p>
+              <p class="fs-700 ff-serif uppercase">Jupiter & Saturn</p>
+            </div>
+            <div>
+              <p class="text-accent">Heading 4 - Bellefair Regular - 32px</p>
+              <p class="fs-600 ff-serif uppercase">Uranus, Neptune, & Pluto</p>
+            </div>
+            <div>
+              <p class="text-accent">
+                Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character
+                Space
+              </p>
+              <p class="text-accent fs-500 ff-sans-cond ls-1 uppercase">
+                So, you want to travel to space
+              </p>
+            </div>
+          </div>
+
+          <div class="flow" style="flex-basis: 100%; --flow-space: 2rem">
+            <div>
+              <p class="text-accent">Subheading 1 - Bellefair Regular - 28px</p>
+              <p class="fs-500 ff-serif uppercase">384,400 km</p>
+            </div>
+            <div>
+              <p class="text-accent">
+                Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character
+                Space
+              </p>
+              <p class="fs-200 ff-sans-cond ls-3 uppercase">Avg. Distance</p>
+            </div>
+            <div>
+              <p class="text-accent">
+                Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space
+              </p>
+              <p class="fs-300 ff-sans-cond ls-2 uppercase">Europa</p>
+            </div>
+            <div>
+              <p class="text-accent">Body Text</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
+                neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
+                ligula sollicitudin laoreet viverra, tortor libero sodales leo,
+                eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.
+                Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh
+                nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel,
+                nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor
+                libero sodales leo, eget blandit nunc tortor eu nibh. Nullam
+                mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit
+                amet, consectetuer adipiscing elit. Phasellus hendrerit.
+                Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel,
+                dapibus id, mattis vel, nisi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESIGN_SYSTEM: INTERACTIVE ELEMENTS -->
+      <section id="interactive-elements" class="flow">
+        <h2 class="numbered-title"><span>03 </span> Interactive elements</h2>
+
+        <!-- navigation -->
+        <nav></nav>
+
+        <div class="flex">
+          <div>
+            <!-- explore button -->
+            <a
+              href="#"
+              class="btn--large text-dark bg-white ff-serif fs-600 uppercase"
+              >Explore</a
+            >
+          </div>
+
+          <div style="margin-bottom: 50vh">
+            <!-- tabs -->
+
+            <!-- dots -->
+
+            <!-- numbers -->
           </div>
         </div>
       </section>

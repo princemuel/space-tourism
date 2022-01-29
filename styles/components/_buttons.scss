@@ -3,8 +3,12 @@
 /* -------------------------------- */
 
 @use '../abstracts' as *;
-/*********** BUTTONS ************/
-%btn {
+/* -------------------------------- */
+/* COMPONENTS                       */
+/* -------------------------------- */
+
+/* buttons */
+.btn {
   display: inline-block;
   border: none;
   border-radius: var(--b-radius);
@@ -17,91 +21,38 @@
   white-space: nowrap;
   mix-blend-mode: normal;
   cursor: pointer;
-  transition: var(--transition);
+  transition: var(--transition, all 0.2s ease);
 
   &:hover,
   &:focus {
     outline: none;
   }
-}
 
-.btn {
-  @extend %btn;
-
-  &-explore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 27.4rem;
-    width: 27.4rem;
-    border-radius: 50%;
+  &--large {
     position: relative;
+    display: grid;
+    place-items: center;
+    padding: 0 2em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    text-decoration: none;
     z-index: 1;
-    color: hsl(var(--clr-dark)) !important;
 
-    &.hovered::before,
-    &::before {
-      content: ' ';
-      background-color: rgba(255, 255, 255, 10.36%);
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
+    &::after {
+      content: '';
       position: absolute;
+      @include size(100%);
+      border-radius: inherit;
+      background: hsl(var(--clr-white) / 0.1);
       z-index: -1;
       opacity: 0;
-      transition: opacity 500ms linear, transform 750ms ease-in-out;
+      transition: opacity 0.5s linear, transform 0.75s ease-out;
     }
 
-    &.hovered::before,
-    &:focus::before,
-    &:hover::before {
+    &:hover::after,
+    &:focus::after {
       opacity: 1;
       transform: scale(1.5);
-    }
-    @include media('<=mid') {
-      height: 18.75rem;
-      width: 18.75rem;
-    }
-  }
-  &-tab {
-    border-radius: 0;
-  }
-
-  &-dot {
-    padding: 1rem;
-    border-radius: 50%;
-    background-color: hsl(var(--clr-light) / 0.25);
-
-    &:hover,
-    &:focus,
-    &.hovered {
-      background-color: hsl(var(--clr-light) / 0.5);
-    }
-
-    &.active,
-    &[aria-selected='true'] {
-      background-color: hsl(var(--clr-light) / 1);
-    }
-  }
-
-  &-numbered {
-    aspect-ratio: 1;
-    height: 8rem;
-    width: 8rem;
-    border-radius: 100%;
-    border: 2px solid hsl(var(--clr-light) / 0.25);
-
-    &:hover,
-    &:focus,
-    &.hovered {
-      border: 3px solid hsl(var(--clr-light) / 0.5);
-    }
-
-    &.active,
-    &[aria-selected='true'] {
-      color: hsl(var(--clr-dark) / 1);
-      background-color: hsl(var(--clr-light) / 1);
-      border: 2px solid hsl(var(--clr-light) / 1);
     }
   }
 }

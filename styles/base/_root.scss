@@ -42,7 +42,7 @@ Version: 01
         }
       }
     } @else {
-      @include media('>=desk', 'screen') {
+      @include media('>=45em', 'screen') {
         @each $prop, $value in $property {
           --fs-#{$prop}: #{$value};
         }
@@ -54,7 +54,4 @@ Version: 01
   --ff-serif: #{$ff-serif};
   --ff-sans-cond: #{$ff-sans-cond};
   --ff-sans-normal: #{$ff-sans-normal};
-  --spacing: 0.02em;
-  --b-radius: 0.8rem;
-  --transition: all 0.2s ease-in;
 }

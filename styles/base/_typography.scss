@@ -6,6 +6,7 @@ h2,
 h3,
 h4,
 h5,
+h6,
 p {
   font-weight: var(--fw-400);
 }
@@ -15,8 +16,6 @@ body {
   background-color: hsl(var(--clr-dark));
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .fs-900,

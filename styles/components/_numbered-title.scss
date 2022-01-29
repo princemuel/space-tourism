@@ -1,0 +1,13 @@
+.numbered-title {
+  font-family: var(--ff-sans-cond);
+  font-size: var(--fs-500);
+  text-transform: uppercase;
+  letter-spacing: 4.72px;
+
+  & span {
+    // margin-inline-end: 2rem;
+    margin-inline-end: 0.5em;
+    color: hsl(var(--clr-white) / 0.25);
+    font-weight: var(--fw-700);
+  }
+}

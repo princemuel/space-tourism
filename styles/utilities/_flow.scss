@@ -1,3 +1,4 @@
-.flow > :where(:not(:first-child)) {
-  margin-block-start: var(--flow-spacer, var(--spacer));
+.flow > *:where(:not(:first-child)) {
+  margin-block-start: var(--flow-space, 1.6rem);
+  outline: 1px solid green;
 }
