@@ -17,17 +17,19 @@ Version: 01
 */
 :root {
   // outputs the theme colors as css variables
-
+  /* color variables */
   @each $prop, $value in $colors {
     --clr-#{"" + $prop}: #{$value};
   }
 
   // outputs the font-weights as css custom variables
+  /* font-weights */
   @each $prop, $value in $font-weights {
     --fw-#{$prop}: #{$value};
   }
 
   // outputs the font-sizes as css custom variables
+  /* font-sizes */
   @each $screen-size, $property in $type-scale {
     @if $screen-size == small {
       @each $prop, $value in $property {
@@ -47,6 +49,7 @@ Version: 01
       }
     }
   }
+
   --ff-sans: #{$ff-sans};
   --ff-serif: #{$ff-serif};
   --ff-sans-cond: #{$ff-sans-cond};
