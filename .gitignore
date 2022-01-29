@@ -28,4 +28,3 @@ note-*.md
 # Local Netlify folder
 .netlify
 functions
-design.*

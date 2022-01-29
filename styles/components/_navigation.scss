@@ -1,0 +1,17 @@
+/* navigation */
+.primary-navigation {
+  --gap: 12.8rem;
+  --underline-gap: 3.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+
+    & > span {
+      font-weight: var(--fw-700);
+      margin-inline-end: 0.5em;
+    }
+  }
+}

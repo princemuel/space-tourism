@@ -34,7 +34,7 @@
 
 ////////////////////////////////////////////
 // MIXINS: Width = Height Mixin
-@mixin size($width, $height: $width) {
+@mixin square($width, $height: $width) {
   width: $width;
   height: $height;
 }

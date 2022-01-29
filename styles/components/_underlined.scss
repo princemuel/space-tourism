@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+
+/* underline-indicators */
+.underlined {
+  & > * {
+    padding-block: var(--underline-gap, 1.6rem);
+    border: 0;
+    border-bottom: 0.32rem solid hsl(var(--clr-white) / 0);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: hsl(var(--clr-white) / 0.5);
+    }
+
+    &.active,
+    &[aria-selected='true'] {
+      border-color: hsl(var(--clr-white) / 1);
+      color: hsl(var(--clr-white) / 1);
+    }
+  }
+}

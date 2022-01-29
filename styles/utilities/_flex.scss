@@ -4,3 +4,7 @@
 .flex {
   @extend %flex;
 }
+
+.flex-col {
+  flex-direction: column;
+}
