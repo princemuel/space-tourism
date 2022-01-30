@@ -10,237 +10,73 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
-
-    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
 
-    <title>Design system</title>
+    <title>Space Tourism Website</title>
     <link rel="stylesheet" href="./styles/index.scss" />
   </head>
-  <body>
-    <div class="container">
-      <h1 class="uppercase">Design system</h1>
-
-      <!-- DESIGN_SYSTEM: COLORS -->
-      <section id="colors" style="margin: 4rem 0">
-        <h2 class="numbered-title"><span>01 </span>colors</h2>
-        <div class="flex">
-          <div style="flex-grow: 1">
-            <div
-              class="bg-dark text-white ff-serif fs-500"
-              style="padding: 4.8rem 1.6rem; border: 1px solid white"
+  <body class="home">
+    <header class="primary-header flex">
+      <!-- <div>
+        <img
+          src="./assets/shared/logo.svg"
+          alt="space tourism logo"
+          class="logo"
+        />
+      </div>
+      <nav>
+        <ul class="primary-navigation underlined flex">
+          <li>
+            <a class="text-white ff-sans-cond ls-2 uppercase" href="#"
+              ><span>00</span>Home</a
             >
-              #0B0D17
-            </div>
-            <p><span class="text-accent">RGB</span> 11, 13, 23</p>
-            <p><span class="text-accent">HSL</span> 230°, 35%, 7%</p>
-          </div>
-          <div style="flex-grow: 1">
-            <div
-              class="bg-accent text-dark ff-serif fs-500"
-              style="padding: 4.8rem 1.6rem; border: 1px solid white"
+          </li>
+          <li>
+            <a class="text-white ff-sans-cond ls-2 uppercase" href="#"
+              ><span>01</span>Destination</a
             >
-              #D0D6F9
-            </div>
-            <p><span class="text-accent">RGB</span> 208, 214, 249</p>
-            <p><span class="text-accent">HSL</span> 231°, 77%, 90%</p>
-          </div>
-          <div style="flex-grow: 1">
-            <div
-              class="bg-white text-dark ff-serif fs-500"
-              style="padding: 4.8rem 1.6rem; border: 1px solid white"
+          </li>
+          <li>
+            <a class="text-white ff-sans-cond ls-2 uppercase" href="#"
+              ><span>02</span>Crew</a
             >
-              #FFFFFF
-            </div>
-            <p><span class="text-accent">RGB</span> 255, 255, 255</p>
-            <p><span class="text-accent">HSL</span> 0°, 0%, 100%</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- DESIGN_SYSTEM: TYPOGRAPHY -->
-      <section id="typography" style="margin: 4rem 0">
-        <h2 class="numbered-title"><span>02 </span>Typography</h2>
-        <div class="flex">
-          <div class="flow" style="flex-basis: 100%; --flow-space: 2rem">
-            <div>
-              <p class="text-accent">Heading 1 - Bellefair Regular - 150px</p>
-              <p class="fs-900 ff-serif uppercase">Earth</p>
-            </div>
-            <div>
-              <p class="text-accent">Heading 2 - Bellefair Regular - 100px</p>
-              <p class="fs-800 ff-serif uppercase">Venus</p>
-            </div>
-            <div>
-              <p class="text-accent">Heading 3 - Bellefair Regular - 56px</p>
-              <p class="fs-700 ff-serif uppercase">Jupiter & Saturn</p>
-            </div>
-            <div>
-              <p class="text-accent">Heading 4 - Bellefair Regular - 32px</p>
-              <p class="fs-600 ff-serif uppercase">Uranus, Neptune, & Pluto</p>
-            </div>
-            <div>
-              <p class="text-accent">
-                Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character
-                Space
-              </p>
-              <p class="text-accent fs-500 ff-sans-cond ls-1 uppercase">
-                So, you want to travel to space
-              </p>
-            </div>
-          </div>
-
-          <div class="flow" style="flex-basis: 100%; --flow-space: 2rem">
-            <div>
-              <p class="text-accent">Subheading 1 - Bellefair Regular - 28px</p>
-              <p class="fs-500 ff-serif uppercase">384,400 km</p>
-            </div>
-            <div>
-              <p class="text-accent">
-                Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character
-                Space
-              </p>
-              <p class="fs-200 ff-sans-cond ls-3 uppercase">Avg. Distance</p>
-            </div>
-            <div>
-              <p class="text-accent">
-                Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space
-              </p>
-              <p class="fs-300 ff-sans-cond ls-2 uppercase">Europa</p>
-            </div>
-            <div>
-              <p class="text-accent">Body Text</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi
-                neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium,
-                ligula sollicitudin laoreet viverra, tortor libero sodales leo,
-                eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.
-                Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh
-                nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel,
-                nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor
-                libero sodales leo, eget blandit nunc tortor eu nibh. Nullam
-                mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit
-                amet, consectetuer adipiscing elit. Phasellus hendrerit.
-                Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel,
-                dapibus id, mattis vel, nisi.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- DESIGN_SYSTEM: INTERACTIVE ELEMENTS -->
-      <section id="interactive-elements" class="flow">
-        <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
-
-        <!-- navigation -->
-        <div>
-          <nav>
-            <ul class="primary-navigation underlined flex">
-              <li class="active">
-                <a class="text-white ls-2 uppercase" href="#"
-                  ><span>01</span>Active</a
-                >
-              </li>
-              <li>
-                <a class="text-white ls-2 uppercase" href="#"
-                  ><span>02</span>Hovered</a
-                >
-              </li>
-              <li>
-                <a class="text-white ls-2 uppercase" href="#"
-                  ><span>03</span>Idle</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="flex">
-          <div style="margin-top: 8rem">
-            <!-- explore button -->
-            <a
-              href="#"
-              class="btn--large text-dark bg-white ff-serif fs-600 uppercase"
-              >Explore</a
+          </li>
+          <li>
+            <a class="text-white ls-2 uppercase" href="#"
+              ><span>03</span>Technology</a
             >
-          </div>
+          </li>
+        </ul>
+      </nav> -->
+    </header>
 
-          <div class="flow" style="margin-bottom: 50vh; --flow-space: 6.4rem">
-            <!-- tabs -->
-            <div class="tab-list underlined flex">
-              <button
-                aria-selected="true"
-                class="text-accent bg-dark ff-sans-cond ls-2 uppercase"
-              >
-                Moon
-              </button>
-              <button
-                aria-selected="false"
-                class="text-accent bg-dark ff-sans-cond ls-2 uppercase"
-              >
-                Mars
-              </button>
-              <button
-                aria-selected="false"
-                class="text-accent bg-dark ff-sans-cond ls-2 uppercase"
-              >
-                Europa
-              </button>
-            </div>
-
-            <!-- dots -->
-            <div class="dotted flex">
-              <button role="tab" aria-selected="true">
-                <span class="sr-only">slide title</span>
-              </button>
-              <button role="tab" aria-selected="false">
-                <span class="sr-only">slide title</span>
-              </button>
-              <button role="tab" aria-selected="false">
-                <span class="sr-only">slide title</span>
-              </button>
-            </div>
-
-            <!-- numbers -->
-            <div class="numbered flex flex-col flow">
-              <button
-                class="text-white ff-serif fs-600"
-                role="tab"
-                aria-selected="true"
-              >
-                <span class="sr-only">slide number</span> 1
-              </button>
-              <button
-                class="text-white ff-serif fs-600"
-                role="tab"
-                aria-selected="false"
-              >
-                <span class="sr-only">slide number</span> 2
-              </button>
-              <button
-                class="text-white ff-serif fs-600"
-                role="tab"
-                aria-selected="false"
-              >
-                <span class="sr-only">slide number</span> 3
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="grid-container">
+      <div>
+        <h1 class="text-accent ff-sans-cond ls-1 fs-500 uppercase">
+          So, you want to travel to
+          <span class="d-block text-white ff-serif fs-900">Space</span>
+        </h1>
+        <p>
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <div>
+        <a href="#" class="btn--large text-dark bg-white ff-serif uppercase"
+          >Explore</a
+        >
+      </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>

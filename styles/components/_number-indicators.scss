@@ -4,7 +4,7 @@
   & > * {
     --flow-space: 2rem;
 
-    display: grid;
+    display: inline-grid;
     place-items: center;
     @include square(8rem);
     aspect-ratio: 1;

@@ -1,8 +1,39 @@
-@use '../abstracts/mq-manager' as mq;
+@use '../abstracts/' as *;
 /*********** CONTAINER ************/
 
 .container {
   max-width: var(--max-width, 128rem);
   margin-inline: auto;
   padding-inline: var(--spacer, 2em);
+}
+
+.grid-container {
+  display: grid;
+  // place-items: center;
+  place-content: center;
+  row-gap: 10vh;
+  text-align: center;
+
+  & * {
+    max-width: 50ch;
+  }
+
+  @include media('>=45em', 'screen') {
+    column-gap: var(--container-gap, 3.2rem);
+    grid-template-columns: minmax(3.2rem, 1fr) repeat(2, minmax(0, 64rem)) minmax(
+        3.2rem,
+        1fr
+      );
+    text-align: left;
+
+    & > *:first-child {
+      grid-column: 2;
+      outline: 1px solid red;
+    }
+
+    & > *:last-child {
+      grid-column: 3;
+      outline: 1px solid yellow;
+    }
+  }
 }

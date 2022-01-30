@@ -3,10 +3,6 @@
 /* -------------------------------- */
 
 @use '../abstracts' as *;
-/* -------------------------------- */
-/* COMPONENTS                       */
-/* -------------------------------- */
-
 /* buttons */
 .btn {
   display: inline-block;
@@ -30,11 +26,12 @@
 
   &--large {
     position: relative;
-    display: grid;
+    display: inline-grid;
     place-items: center;
     padding: 0 2em;
     aspect-ratio: 1;
     border-radius: 50%;
+    font-size: 3.2rem;
     text-decoration: none;
     z-index: 1;
 
