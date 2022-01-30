@@ -27,12 +27,10 @@
 
     & > *:first-child {
       grid-column: 2;
-      outline: 1px solid red;
     }
 
     & > *:last-child {
       grid-column: 3;
-      outline: 1px solid yellow;
     }
 
     &--home {
