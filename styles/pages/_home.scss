@@ -1,2 +1,20 @@
-@use '../abstracts/' as *;
+/* -------------------------------- */
+/* PAGES                           */
+/* -------------------------------- */
+@use '../abstracts' as *;
 @use '../utilities/' as *;
+
+/* HOME */
+
+.home {
+  background-image: img('home/background-home-mobile.jpg');
+
+  @include media('>=35em', 'screen') {
+    background-position: center center;
+    background-image: img('home/background-home-tablet.jpg');
+  }
+
+  @include media('>=45em', 'screen') {
+    background-image: img('home/background-home-desktop.jpg');
+  }
+}

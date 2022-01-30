@@ -1,10 +1,37 @@
+@use '../abstracts/' as *;
+
 /* navigation */
 .primary-navigation {
-  --gap: 12.8rem;
+  // --gap: 12.8rem; // for design system
   --underline-gap: 3.2rem;
+
   list-style: none;
   margin: 0;
   padding: 0;
+  background: hsl(var(--clr-dark) / 0.95);
+
+  @supports (backdrop-filter: blur(1.8rem)) {
+    background: hsl(var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.8rem);
+  }
+
+  @include media('<=35rem') {
+    --underline-gap: 0.8rem;
+
+    position: fixed;
+    inset: 0 0 0 33%;
+    flex-direction: column;
+    padding: min(32rem, 15vh) 3.2rem;
+    // background: black;
+    // backdrop-filter: blur(1.8rem);
+    z-index: 1000;
+
+    &.underlined {
+      & > .active {
+        border: 0;
+      }
+    }
+  }
 
   a {
     text-decoration: none;

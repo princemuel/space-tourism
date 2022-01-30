@@ -3,9 +3,12 @@
 
 body {
   position: relative;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-rows: min-content 1fr;
-  border: 1px solid limegreen;
+
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

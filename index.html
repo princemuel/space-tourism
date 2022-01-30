@@ -26,16 +26,23 @@
   </head>
   <body class="home">
     <header class="primary-header flex">
-      <!-- <div>
+      <div>
         <img
           src="./assets/shared/logo.svg"
           alt="space tourism logo"
           class="logo"
         />
       </div>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
       <nav>
-        <ul class="primary-navigation underlined flex">
-          <li>
+        <ul id="primary-navigation" class="primary-navigation underlined flex">
+          <li class="active">
             <a class="text-white ff-sans-cond ls-2 uppercase" href="#"
               ><span>00</span>Home</a
             >
@@ -56,10 +63,10 @@
             >
           </li>
         </ul>
-      </nav> -->
+      </nav>
     </header>
 
-    <div class="grid-container">
+    <div class="grid-container grid-container--home">
       <div>
         <h1 class="text-accent ff-sans-cond ls-1 fs-500 uppercase">
           So, you want to travel to

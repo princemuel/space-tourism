@@ -1,3 +1,4 @@
+// import '/styles/index.scss';
 console.log('Hello! This is a Typescript only project');
 
 // const article = document.querySelector('#electric-cars');
