@@ -1,0 +1,15 @@
+.skip-to-content {
+  position: absolute;
+  margin-inline: auto;
+  padding: 0.5em 1em;
+  color: hsl(var(--clr-dark));
+  background: hsl(var(--clr-white));
+  clip: none;
+  z-index: 9999;
+  transform: translateY(-100%);
+  transition: transform 500ms ease-in-out;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}

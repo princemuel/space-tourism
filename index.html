@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./styles/index.scss" />
   </head>
   <body class="home">
+    <a href="#main-content" class="skip-to-content">Skip To Content</a>
     <header class="primary-header flex">
       <div>
         <img
@@ -48,29 +49,29 @@
         >
           <li class="active">
             <a class="text-white ff-sans-cond ls-2 uppercase" href="#"
-              ><span>00</span>Home</a
+              ><span aria-hidden="true">00</span>Home</a
             >
           </li>
           <li>
             <a class="text-white ff-sans-cond ls-2 uppercase" href="#"
-              ><span>01</span>Destination</a
+              ><span aria-hidden="true">01</span>Destination</a
             >
           </li>
           <li>
             <a class="text-white ff-sans-cond ls-2 uppercase" href="#"
-              ><span>02</span>Crew</a
+              ><span aria-hidden="true">02</span>Crew</a
             >
           </li>
           <li>
             <a class="text-white ls-2 uppercase" href="#"
-              ><span>03</span>Technology</a
+              ><span aria-hidden="true">03</span>Technology</a
             >
           </li>
         </ul>
       </nav>
     </header>
 
-    <div class="grid-container grid-container--home">
+    <main id="main-content" class="grid-container grid-container--home">
       <div>
         <h1 class="text-accent ff-sans-cond ls-1 fs-500 uppercase">
           So, you want to travel to
@@ -88,7 +89,7 @@
           >Explore</a
         >
       </div>
-    </div>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

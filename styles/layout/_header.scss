@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+
+/* primary header */
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+
+  @include media('>=45em') {
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      height: 1px;
+      width: 100%;
+      margin-right: -2.4rem;
+      background: hsl(var(--clr-white) / 0.25);
+      order: 1;
+      z-index: 3000;
+    }
+
+    & > nav {
+      order: 2;
+    }
+  }
+}

@@ -1,21 +1,25 @@
 @use '../abstracts/' as *;
 
-/* navigation */
+/************* navigation *************/
 .primary-navigation {
-  // --gap: 12.8rem; // for design system
+  // --gap: 12.6rem; // for design system
+
+  --gap: clamp(2rem, 5vw, 5.5rem);
   --underline-gap: 3.2rem;
 
   list-style: none;
   margin: 0;
   padding: 0;
-  background: hsl(var(--clr-dark) / 0.95);
+  background: hsl(var(--clr-dark) / 0.99);
+  opacity: 0.9;
 
   @supports (backdrop-filter: blur(1.8rem)) {
-    background: hsl(var(--clr-white) / 0.05);
+    opacity: initial;
+    background: hsl(var(--clr-accent) / 0.04);
     backdrop-filter: blur(2.2rem);
   }
 
-  @include media('<=35rem') {
+  @include media('<=35em') {
     --underline-gap: 0.8rem;
     --fs-400: 1.6rem;
 
@@ -39,12 +43,24 @@
     }
   }
 
+  @include media('>=35em') {
+    padding-inline: clamp(4rem, 6vw, 8rem);
+  }
+
+  @include media('>=45em') {
+    margin-block: 3.2rem;
+  }
+
   a {
     text-decoration: none;
 
     & > span {
       font-weight: var(--fw-700);
       margin-inline-end: 0.5em;
+
+      @include media('>=35em', '<=44.99em') {
+        display: none;
+      }
     }
   }
 }
