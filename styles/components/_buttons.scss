@@ -52,4 +52,31 @@
       transform: scale(1.5);
     }
   }
+
+  &--mobile-toggle {
+    display: none;
+
+    @include media('<=35em') {
+      position: absolute;
+      top: 3.2rem;
+      right: 1.6rem;
+      display: block;
+      width: 2.4rem;
+      aspect-ratio: 1;
+      border: none;
+      background: transparent;
+      background-image: img('shared/icon-hamburger.svg');
+      background-repeat: no-repeat;
+      z-index: 2000;
+
+      &[aria-expanded='true'] {
+        background-image: img('shared/icon-close.svg');
+      }
+
+      &:focus-visible {
+        outline: 5px solid hsl(var(--clr-accent) / 0.6);
+        outline-offset: 5px;
+      }
+    }
+  }
 }

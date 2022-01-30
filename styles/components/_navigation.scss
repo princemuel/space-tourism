@@ -12,19 +12,25 @@
 
   @supports (backdrop-filter: blur(1.8rem)) {
     background: hsl(var(--clr-white) / 0.05);
-    backdrop-filter: blur(1.8rem);
+    backdrop-filter: blur(2.2rem);
   }
 
   @include media('<=35rem') {
     --underline-gap: 0.8rem;
+    --fs-400: 1.6rem;
 
     position: fixed;
     inset: 0 0 0 33%;
     flex-direction: column;
-    padding: min(32rem, 15vh) 3.2rem;
-    // background: black;
-    // backdrop-filter: blur(1.8rem);
+    padding: min(32rem, 16vh) 3.2rem;
+    font-size: var(--fs-400);
+    transform: translateX(100%);
+    transition: transform 0.8s ease-in-out;
     z-index: 1000;
+
+    &[data-visible='true'] {
+      transform: translateX(0);
+    }
 
     &.underlined {
       & > .active {

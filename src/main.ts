@@ -1,10 +1,20 @@
-// import '/styles/index.scss';
-console.log('Hello! This is a Typescript only project');
+import data from '../data.json';
 
-// const article = document.querySelector('#electric-cars');
-// // The following would also work:
-// // const article = document.getElementById("electric-cars")
+const nav = document.querySelector('.primary-navigation') as HTMLUListElement;
+const navBtn = document.querySelector(
+  '.btn--mobile-toggle'
+) as HTMLButtonElement;
 
-// article.dataset.columns // "3"
-// article.dataset.indexNumber // "12314"
-// article.dataset.parent // "cars"
+navBtn.addEventListener('click', () => {
+  const visibility = nav.getAttribute('data-visible')!;
+
+  if (visibility === 'false') {
+    nav.setAttribute('data-visible', 'true');
+    navBtn.setAttribute('aria-expanded', 'true');
+  } else {
+    nav.setAttribute('data-visible', 'false');
+    navBtn.setAttribute('aria-expanded', 'false');
+  }
+});
+
+console.log(data);

@@ -34,14 +34,18 @@
         />
       </div>
       <button
-        class="mobile-nav-toggle"
+        class="btn--mobile-toggle"
         aria-controls="primary-navigation"
         aria-expanded="false"
       >
         <span class="sr-only">Menu</span>
       </button>
       <nav>
-        <ul id="primary-navigation" class="primary-navigation underlined flex">
+        <ul
+          id="primary-navigation"
+          class="primary-navigation underlined flex"
+          data-visible="false"
+        >
           <li class="active">
             <a class="text-white ff-sans-cond ls-2 uppercase" href="#"
               ><span>00</span>Home</a
