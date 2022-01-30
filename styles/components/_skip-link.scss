@@ -4,9 +4,9 @@
   padding: 0.5em 1em;
   color: hsl(var(--clr-dark));
   background: hsl(var(--clr-white));
-  clip: none;
+  clip: 0;
   z-index: 9999;
-  transform: translateY(-100%);
+  transform: translateY(-120%);
   transition: transform 500ms ease-in-out;
 
   &:focus {
