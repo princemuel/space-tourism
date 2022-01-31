@@ -17,7 +17,21 @@
 
 .destination-meta {
   flex-direction: column;
-  margin-top: 4rem;
-  padding-top: 4rem;
+  margin-top: 3.2rem;
+  padding-top: 3.2rem;
   border-top: 1px solid hsl(var(--clr-white) / 0.1);
+
+  & p {
+    font-size: 2.8rem;
+  }
+
+  @include media('>=35em') {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @include media('>=45em') {
+    --gap: min(6vw, 8rem);
+    justify-content: start;
+  }
 }
