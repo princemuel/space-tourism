@@ -1,3 +1,16 @@
-/* -------------------------------- */
-/* PAGES                            */
-/* -------------------------------- */
+@use '../abstracts/' as *;
+
+/* CREW */
+
+.crew {
+  background-image: img('crew/background-crew-mobile.jpg');
+
+  @include media('>=35em', 'screen') {
+    background-position: center center;
+    background-image: img('crew/background-crew-tablet.jpg');
+  }
+
+  @include media('>=45em', 'screen') {
+    background-image: img('crew/background-crew-desktop.jpg');
+  }
+}

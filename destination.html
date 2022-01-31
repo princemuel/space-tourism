@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
     <!--
     <link
       rel="stylesheet"
@@ -17,10 +22,10 @@
       rel="stylesheet"
     /> -->
 
-    <title>Space Tourism | Home</title>
+    <title>Space Tourism | Destination</title>
     <link rel="stylesheet" href="./styles/index.scss" />
   </head>
-  <body class="home">
+  <body class="destination">
     <a href="#main-content" class="skip-to-content">Skip To Content</a>
     <header class="primary-header flex">
       <div>
@@ -69,25 +74,68 @@
       </nav>
     </header>
 
-    <main id="main-content" class="grid-container grid-container--home">
-      <div>
-        <h1 class="text-accent ff-sans-cond ls-1 fs-500 uppercase">
-          So, you want to travel to
-          <span class="d-block text-white ff-serif fs-900">Space</span>
-        </h1>
-        <p>
-          Let’s face it; if you want to go to space, you might as well genuinely
-          go to outer space and not hover kind of on the edge of it. Well sit
-          back, and relax because we’ll give you a truly out of this world
-          experience!
-        </p>
-      </div>
-      <div>
-        <a href="#" class="btn--large text-dark bg-white ff-serif uppercase"
-          >Explore</a
+    <main id="main-content" class="grid-container grid-container--destination">
+      <h1 class="numbered-title">
+        <span aria-hidden="true">01</span> Pick your destination
+      </h1>
+
+      <img src="./assets/destination/image-moon.png" alt="the moon" />
+
+      <!-- tabs -->
+      <div class="tab-list underlined flex">
+        <button
+          aria-selected="true"
+          class="text-accent ff-sans-cond ls-2 uppercase"
         >
+          Moon
+        </button>
+        <button
+          aria-selected="false"
+          class="text-accent ff-sans-cond ls-2 uppercase"
+        >
+          Mars
+        </button>
+        <button
+          aria-selected="false"
+          class="text-accent ff-sans-cond ls-2 uppercase"
+        >
+          Europa
+        </button>
+        <button
+          aria-selected="false"
+          class="text-accent ff-sans-cond ls-2 uppercase"
+        >
+          Titan
+        </button>
       </div>
+
+      <article class="destination-info flow">
+        <h2 class="text-white ff-serif fs-800 ls-1 uppercase">Moon</h2>
+        <p class="text-accent">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+
+        <div class="destination-meta flex">
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Avg. Distance
+            </h3>
+            <p class="fs-500 ff-serif uppercase">384,400 km</p>
+          </section>
+
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Est. travel time
+            </h3>
+            <p class="fs-500 ff-serif uppercase"><time>3 days</time></p>
+          </section>
+        </div>
+      </article>
     </main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

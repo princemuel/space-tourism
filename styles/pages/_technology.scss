@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+/* TECHNOLOGY */
+
+.technology {
+  background-image: img('technology/background-technology-mobile.jpg');
+
+  @include media('>=35em', 'screen') {
+    background-position: center center;
+    background-image: img('technology/background-technology-tablet.jpg');
+  }
+
+  @include media('>=45em', 'screen') {
+    background-image: img('technology/background-technology-desktop.jpg');
+  }
+}

@@ -1,1 +1,23 @@
 @use '../abstracts/' as *;
+
+/* DESTINATION */
+
+.destination {
+  background-image: img('destination/background-destination-mobile.jpg');
+
+  @include media('>=35em', 'screen') {
+    background-position: center center;
+    background-image: img('destination/background-destination-tablet.jpg');
+  }
+
+  @include media('>=45em', 'screen') {
+    background-image: img('destination/background-destination-desktop.jpg');
+  }
+}
+
+.destination-meta {
+  flex-direction: column;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid hsl(var(--clr-white) / 0.1);
+}

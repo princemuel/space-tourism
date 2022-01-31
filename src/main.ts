@@ -17,4 +17,4 @@ navBtn.addEventListener('click', () => {
   }
 });
 
-console.log(data);
+console.log(data.crew[0]);
