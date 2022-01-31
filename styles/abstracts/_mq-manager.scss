@@ -40,9 +40,9 @@
 ///
 $breakpoints: (
   'phone': 20em,
-  'mid': 31em,
-  'tab': 37.5em,
-  'pad': 56.25em,
+  'mid': 35em,
+  'tab': 45em,
+  'ipad': 56.25em,
   'desk': 75em,
   'large': 112.5em,
 ) !default;
@@ -466,7 +466,7 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
       $result: $result * 10 + map-get($numbers, $character);
     } @else {
       $digits: $digits * 10;
-      $result: $result + map-get($numbers, $character) / $digits;
+      $result: $result + calc(map-get($numbers, $character) / $digits);
     }
   }
 
