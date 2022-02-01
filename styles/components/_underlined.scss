@@ -3,7 +3,7 @@
 /* underline-indicators */
 .underlined {
   & > * {
-    padding-block: var(--underline-gap, 1.6rem);
+    padding-block: var(--underline-gap, 0.8rem);
     border: 0;
     border-bottom: 2px solid hsl(var(--clr-white) / 0);
     background-color: transparent;

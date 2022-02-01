@@ -1,5 +1,3 @@
-import data from '../data.json';
-
 const nav = document.querySelector('.primary-navigation') as HTMLUListElement;
 const navBtn = document.querySelector(
   '.btn--mobile-toggle'
@@ -17,4 +15,11 @@ navBtn.addEventListener('click', () => {
   }
 });
 
-console.log(data.crew[0]);
+// const categories = data.destinations.reduce((names, destination) => {
+//   if (!names.includes(destination.name)) {
+//     names.push(destination.name);
+//   }
+//   return names;
+// }, [] as string[]);
+
+// console.log(categories);

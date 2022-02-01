@@ -28,6 +28,7 @@
   <body class="destination">
     <a href="#main-content" class="skip-to-content">Skip To Content</a>
     <header class="primary-header flex">
+      <!-- SITE LOGO -->
       <div>
         <img
           src="./assets/shared/logo.svg"
@@ -35,6 +36,8 @@
           class="logo"
         />
       </div>
+
+      <!-- MOBILE TOGGLE -->
       <button
         class="btn--mobile-toggle"
         aria-controls="primary-navigation"
@@ -42,6 +45,8 @@
       >
         <span class="sr-only">Menu</span>
       </button>
+
+      <!-- NAVIGATION -->
       <nav>
         <ul
           id="primary-navigation"
@@ -82,9 +87,15 @@
         <span aria-hidden="true">01</span> Pick your destination
       </h1>
 
-      <img src="./assets/destination/image-moon.png" alt="the moon" />
+      <picture>
+        <source
+          srcset="./assets/destination/image-moon.webp"
+          type="image/webp"
+        />
+        <img src="./assets/destination/image-moon.png" alt="the moon" />
+      </picture>
 
-      <!-- tabs -->
+      <!-- tab indicators -->
       <div class="tab-list underlined flex">
         <button
           aria-selected="true"

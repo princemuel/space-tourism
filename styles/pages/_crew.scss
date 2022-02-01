@@ -14,3 +14,8 @@
     background-image: img('crew/background-crew-desktop.jpg');
   }
 }
+
+.crew-details h2 {
+  opacity: 0.5;
+  // color: hsl(var(--clr-white) / 0.5);
+}

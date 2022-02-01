@@ -1,10 +1,10 @@
-.dotted {
+.dot-list {
   & > * {
     padding: 0.5em;
     border: 0;
     border-radius: 50%;
     background-color: hsl(var(--clr-white) / 0.25);
-    // aspect-ratio: 1;
+    aspect-ratio: 1;
     cursor: pointer;
 
     &:hover,

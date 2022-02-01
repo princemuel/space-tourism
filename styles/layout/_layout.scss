@@ -42,9 +42,7 @@
   /*** destination layout ***/
   &--destination {
     --flow-space: 3.2rem;
-    --underline-gap: 1rem;
     grid-template-areas: 'title' 'image' 'tabs' 'content';
-
     @include media('>=45em') {
       grid-template-areas:
         '. title title .'
@@ -56,14 +54,13 @@
 
     & > .numbered-title {
       grid-area: title;
-
       @include media('>=35em') {
         justify-self: start;
         margin-block-start: 3.2rem;
       }
     }
 
-    & > img {
+    & > picture {
       grid-area: image;
       max-width: 60%;
       @include media('>=45em') {
@@ -76,6 +73,54 @@
     }
 
     & > .destination-info {
+      grid-area: content;
+    }
+  }
+
+  /*** crew layout ***/
+  &--crew {
+    --flow-space: 2rem;
+    grid-template-areas: 'title' 'image' 'dots' 'content';
+    padding-bottom: 0;
+    @include media('>=35em') {
+      grid-template-areas: 'title' 'content' 'dots' 'image';
+    }
+    @include media('>=45em') {
+      grid-template-areas:
+        '. title title .'
+        '. content image .'
+        '. dots image .';
+      align-content: start;
+      justify-items: start;
+    }
+
+    & > .numbered-title {
+      grid-area: title;
+      @include media('>=35em') {
+        justify-self: start;
+        margin-block-start: 3.2rem;
+      }
+      // @include media('>=35em', '<=44.99em') {
+      //   justify-self: start;
+      //   margin-block-start: 3.2rem;
+      // }
+    }
+
+    & > picture {
+      grid-area: image;
+      max-width: 60%;
+      border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
+      @include media('>=45em') {
+        max-width: 90%;
+        align-self: end;
+      }
+    }
+
+    & > .dot-list {
+      grid-area: dots;
+    }
+
+    & > .crew-details {
       grid-area: content;
     }
   }
