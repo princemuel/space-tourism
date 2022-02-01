@@ -87,35 +87,75 @@
         <span aria-hidden="true">01</span> Pick your destination
       </h1>
 
-      <picture>
+      <picture id="moon-image">
         <source
           srcset="./assets/destination/image-moon.webp"
           type="image/webp"
         />
         <img src="./assets/destination/image-moon.png" alt="the moon" />
       </picture>
+      <picture id="mars-image" hidden>
+        <source
+          srcset="./assets/destination/image-mars.webp"
+          type="image/webp"
+        />
+        <img src="./assets/destination/image-mars.png" alt="the planet mars" />
+      </picture>
+      <picture id="europa-image" hidden>
+        <source
+          srcset="./assets/destination/image-europa.webp"
+          type="image/webp"
+        />
+        <img
+          src="./assets/destination/image-europa.png"
+          alt="the planet europa"
+        />
+      </picture>
+      <picture id="titan-image" hidden>
+        <source
+          srcset="./assets/destination/image-titan.webp"
+          type="image/webp"
+        />
+        <img src="./assets/destination/image-titan.png" alt="the moon titan" />
+      </picture>
 
       <!-- tab indicators -->
-      <div class="tab-list underlined flex">
+      <div
+        role="tablist"
+        aria-label="destination list"
+        class="tab-list underlined flex"
+      >
         <button
+          role="tab"
+          data-image="moon-image"
+          aria-controls="moon-tab"
           aria-selected="true"
           class="text-accent ff-sans-cond ls-3 uppercase"
         >
           Moon
         </button>
         <button
+          role="tab"
+          data-image="mars-image"
+          aria-controls="mars-tab"
           aria-selected="false"
           class="text-accent ff-sans-cond ls-3 uppercase"
         >
           Mars
         </button>
         <button
+          role="tab"
+          data-image="europa-image"
+          aria-controls="europa-tab"
           aria-selected="false"
           class="text-accent ff-sans-cond ls-3 uppercase"
         >
           Europa
         </button>
         <button
+          role="tab"
+          data-image="titan-image"
+          aria-controls="titan-tab"
           aria-selected="false"
           class="text-accent ff-sans-cond ls-3 uppercase"
         >
@@ -123,7 +163,13 @@
         </button>
       </div>
 
-      <article class="destination-info flow">
+      <!-- THE MOON -->
+      <article
+        role="tabpanel"
+        tabindex="0"
+        id="moon-tab"
+        class="destination-info flow"
+      >
         <h2 class="text-white ff-serif fs-800 ls-1 uppercase">Moon</h2>
         <p class="text-accent">
           See our planet as you’ve never seen it before. A perfect relaxing trip
@@ -145,6 +191,105 @@
               Est. travel time
             </h3>
             <p class="ff-serif uppercase"><time>3 days</time></p>
+          </section>
+        </div>
+      </article>
+
+      <!-- MARS -->
+      <article
+        role="tabpanel"
+        tabindex="-1"
+        id="mars-tab"
+        class="destination-info flow"
+        hidden
+      >
+        <h2 class="text-white ff-serif fs-800 ls-1 uppercase">Mars</h2>
+        <p class="text-accent">
+          Don’t forget to pack your hiking boots. You’ll need them to tackle
+          Olympus Mons, the tallest planetary mountain in our solar system. It’s
+          two and a half times the size of Everest!
+        </p>
+
+        <div class="destination-meta flex">
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Avg. Distance
+            </h3>
+            <p class="ff-serif uppercase">225 mil. km</p>
+          </section>
+
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase"><time>9 months</time></p>
+          </section>
+        </div>
+      </article>
+
+      <!-- EUROPA -->
+      <article
+        role="tabpanel"
+        tabindex="-1"
+        id="europa-tab"
+        class="destination-info flow"
+        hidden
+      >
+        <h2 class="text-white ff-serif fs-800 ls-1 uppercase">Europa</h2>
+        <p class="text-accent">
+          The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+          winter lover’s dream. With an icy surface, it’s perfect for a bit of
+          ice skating, curling, hockey, or simple relaxation in your snug
+          wintery cabin.
+        </p>
+
+        <div class="destination-meta flex">
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Avg. Distance
+            </h3>
+            <p class="ff-serif uppercase">628 mil. km</p>
+          </section>
+
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase">
+              <time datetime="PT3Y">3 years</time>
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <!-- TITAN -->
+      <article
+        role="tabpanel"
+        tabindex="-1"
+        id="titan-tab"
+        class="destination-info flow"
+        hidden
+      >
+        <h2 class="text-white ff-serif fs-800 ls-1 uppercase">Titan</h2>
+        <p class="text-accent">
+          The only moon known to have a dense atmosphere other than Earth, Titan
+          is a home away from home (just a few hundred degrees colder!). As a
+          bonus, you get striking views of the Rings of Saturn.
+        </p>
+
+        <div class="destination-meta flex">
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Avg. Distance
+            </h3>
+            <p class="ff-serif uppercase">1.6 bil. km</p>
+          </section>
+
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase"><time>7 years</time></p>
           </section>
         </div>
       </article>
