@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
     <!--
     <link
       rel="stylesheet"
@@ -17,12 +22,13 @@
       rel="stylesheet"
     /> -->
 
-    <title>Space Tourism | Home</title>
+    <title>Space Tourism | Crew</title>
     <link rel="stylesheet" href="./styles/index.scss" />
   </head>
-  <body class="home">
+  <body class="crew">
     <a href="#main-content" class="skip-to-content">Skip To Content</a>
     <header class="primary-header flex">
+      <!-- SITE LOGO -->
       <div>
         <img
           src="./assets/shared/logo.svg"
@@ -30,6 +36,8 @@
           class="logo"
         />
       </div>
+
+      <!-- MOBILE TOGGLE -->
       <button
         class="btn--mobile-toggle"
         aria-controls="primary-navigation"
@@ -37,6 +45,8 @@
       >
         <span class="sr-only">Menu</span>
       </button>
+
+      <!-- NAVIGATION -->
       <nav>
         <ul
           id="primary-navigation"
@@ -69,25 +79,51 @@
       </nav>
     </header>
 
-    <main id="main-content" class="grid-container grid-container--home">
-      <div>
-        <h1 class="text-accent ff-sans-cond ls-1 fs-500 uppercase">
-          So, you want to travel to
-          <span class="d-block text-white ff-serif fs-900">Space</span>
-        </h1>
-        <p>
-          Let’s face it; if you want to go to space, you might as well genuinely
-          go to outer space and not hover kind of on the edge of it. Well sit
-          back, and relax because we’ll give you a truly out of this world
-          experience!
+    <main id="main-content" class="grid-container grid-container--crew flow">
+      <h1 class="numbered-title">
+        <span aria-hidden="true">02</span> Meet your crew
+      </h1>
+
+      <!-- dot indicators -->
+      <div class="dot-list flex">
+        <button role="tab" aria-selected="true">
+          <span class="sr-only">slide title</span>
+        </button>
+        <button role="tab" aria-selected="false">
+          <span class="sr-only">slide title</span>
+        </button>
+        <button role="tab" aria-selected="false">
+          <span class="sr-only">slide title</span>
+        </button>
+        <button role="tab" aria-selected="false">
+          <span class="sr-only">slide title</span>
+        </button>
+      </div>
+
+      <article class="crew-details flow">
+        <header class="flow flow-space--small">
+          <h2 class="ff-serif fs-600 uppercase">Commander</h2>
+          <p class="ff-serif fs-700 uppercase">Douglas Hurley</p>
+        </header>
+        <p class="text-accent">
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
         </p>
-      </div>
-      <div>
-        <a href="#" class="btn--large text-dark bg-white ff-serif uppercase"
-          >Explore</a
-        >
-      </div>
+      </article>
+
+      <picture>
+        <source
+          srcset="./assets/crew/image-douglas-hurley.webp"
+          type="image/webp"
+        />
+        <img
+          src="./assets/crew/image-douglas-hurley.png"
+          alt="crew member douglas hurley "
+        />
+      </picture>
     </main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

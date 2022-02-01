@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <!--
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <title>Space Tourism | Destination</title>
+    <link rel="stylesheet" href="./styles/index.scss" />
+  </head>
+  <body class="destination">
+    <a href="#main-content" class="skip-to-content">Skip To Content</a>
+    <header class="primary-header flex">
+      <!-- SITE LOGO -->
+      <div>
+        <img
+          src="./assets/shared/logo.svg"
+          alt="space tourism logo"
+          class="logo"
+        />
+      </div>
+
+      <!-- MOBILE TOGGLE -->
+      <button
+        class="btn--mobile-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <ul
+          id="primary-navigation"
+          class="primary-navigation underlined flex"
+          data-visible="false"
+        >
+          <li class="active">
+            <a class="text-white ff-sans-cond ls-2 uppercase" href="index.html"
+              ><span aria-hidden="true">00</span>Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-white ff-sans-cond ls-2 uppercase"
+              href="destination.html"
+              ><span aria-hidden="true">01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a class="text-white ff-sans-cond ls-2 uppercase" href="crew.html"
+              ><span aria-hidden="true">02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a class="text-white ls-2 uppercase" href="technology.html"
+              ><span aria-hidden="true">03</span>Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main
+      id="main-content"
+      class="grid-container grid-container--destination flow"
+    >
+      <h1 class="numbered-title">
+        <span aria-hidden="true">01</span> Pick your destination
+      </h1>
+
+      <picture>
+        <source
+          srcset="./assets/destination/image-moon.webp"
+          type="image/webp"
+        />
+        <img src="./assets/destination/image-moon.png" alt="the moon" />
+      </picture>
+
+      <!-- tab indicators -->
+      <div class="tab-list underlined flex">
+        <button
+          aria-selected="true"
+          class="text-accent ff-sans-cond ls-3 uppercase"
+        >
+          Moon
+        </button>
+        <button
+          aria-selected="false"
+          class="text-accent ff-sans-cond ls-3 uppercase"
+        >
+          Mars
+        </button>
+        <button
+          aria-selected="false"
+          class="text-accent ff-sans-cond ls-3 uppercase"
+        >
+          Europa
+        </button>
+        <button
+          aria-selected="false"
+          class="text-accent ff-sans-cond ls-3 uppercase"
+        >
+          Titan
+        </button>
+      </div>
+
+      <article class="destination-info flow">
+        <h2 class="text-white ff-serif fs-800 ls-1 uppercase">Moon</h2>
+        <p class="text-accent">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+
+        <div class="destination-meta flex">
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Avg. Distance
+            </h3>
+            <p class="ff-serif uppercase">384,400 km</p>
+          </section>
+
+          <section>
+            <h3 class="text-accent fs-200 ff-sans-cond ls-3 uppercase">
+              Est. travel time
+            </h3>
+            <p class="ff-serif uppercase"><time>3 days</time></p>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

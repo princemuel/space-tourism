@@ -1,3 +1,9 @@
 .flow > *:where(:not(:first-child)) {
   margin-block-start: var(--flow-space, 1.6rem);
 }
+
+.flow-space--small {
+  --flow-space: 1.2rem;
+}
+
+// could have multiple flow-space classes 1, 2 etc

@@ -1,6 +1,6 @@
 @use '../abstracts/' as *;
 
-.numbered {
+.number-list {
   & > * {
     --flow-space: 2rem;
 

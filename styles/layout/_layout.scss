@@ -2,3 +2,126 @@
 /* LAYOUT                           */
 /* -------------------------------- */
 @use '../abstracts' as *;
+
+/*********** LAYOUT ************/
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  padding-inline: 1.6rem;
+  padding-bottom: 6.4rem;
+  text-align: center;
+
+  & p:not([class]) {
+    max-width: 50ch;
+  }
+
+  @include media('>=45em', 'screen') {
+    grid-template-columns: minmax(3.2rem, 1fr) repeat(2, minmax(0, 64rem)) minmax(
+        3.2rem,
+        1fr
+      );
+    column-gap: var(--container-gap, 3.2rem);
+    text-align: left;
+
+    /*** home layout ***/
+    &--home {
+      align-items: end;
+      padding-bottom: max(9.6rem, 10vh);
+
+      & > *:first-child {
+        grid-column: 2;
+      }
+
+      & > *:last-child {
+        grid-column: 3;
+      }
+    }
+  }
+
+  /*** destination layout ***/
+  &--destination {
+    --flow-space: 3.2rem;
+    grid-template-areas: 'title' 'image' 'tabs' 'content';
+    @include media('>=45em') {
+      grid-template-areas:
+        '. title title .'
+        '. image tabs .'
+        '. image content .';
+      align-content: start;
+      justify-items: start;
+    }
+
+    & > .numbered-title {
+      grid-area: title;
+      @include media('>=35em') {
+        justify-self: start;
+        margin-block-start: 3.2rem;
+      }
+    }
+
+    & > picture {
+      grid-area: image;
+      max-width: 60%;
+      @include media('>=45em') {
+        max-width: 90%;
+      }
+    }
+
+    & > .tab-list {
+      grid-area: tabs;
+    }
+
+    & > .destination-info {
+      grid-area: content;
+    }
+  }
+
+  /*** crew layout ***/
+  &--crew {
+    --flow-space: 2rem;
+    grid-template-areas: 'title' 'image' 'dots' 'content';
+    padding-bottom: 0;
+    @include media('>=35em') {
+      grid-template-areas: 'title' 'content' 'dots' 'image';
+    }
+    @include media('>=45em') {
+      grid-template-areas:
+        '. title title .'
+        '. content image .'
+        '. dots image .';
+      align-content: start;
+      justify-items: start;
+    }
+
+    & > .numbered-title {
+      grid-area: title;
+      @include media('>=35em') {
+        justify-self: start;
+        margin-block-start: 3.2rem;
+      }
+      // @include media('>=35em', '<=44.99em') {
+      //   justify-self: start;
+      //   margin-block-start: 3.2rem;
+      // }
+    }
+
+    & > picture {
+      grid-area: image;
+      max-width: 60%;
+      border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
+      @include media('>=45em') {
+        max-width: 90%;
+        align-self: end;
+      }
+    }
+
+    & > .dot-list {
+      grid-area: dots;
+    }
+
+    & > .crew-details {
+      grid-area: content;
+    }
+  }
+}
