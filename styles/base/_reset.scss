@@ -3,8 +3,13 @@
 /* Set core root defaults */
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
   text-rendering: optimizeSpeed;
+  font-size: 56.25%;
+
+  @include media('>=48em') {
+    font-size: 62.5%;
+  }
+
   &,
   &:focus-within {
     scroll-behavior: smooth;
@@ -38,8 +43,9 @@ body {
 }
 
 /* Make images easier to work with */
+/* added the not hidden selector to fix display issues */
 img,
-picture {
+picture:not([hidden]) {
   height: auto;
   display: block;
   max-width: 100%;
