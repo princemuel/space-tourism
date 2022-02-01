@@ -21,13 +21,11 @@ function changeTabFocus(e: KeyboardEvent) {
   }
 
   if (e.code === Pointer.RIGHT) {
-    console.log('KDR', e.code);
     tabFocus++;
     if (tabFocus >= tabs.length) tabFocus = 0;
   }
 
   if (e.code === Pointer.LEFT) {
-    console.log('KDR', e.code);
     tabFocus--;
     if (tabFocus < 0) tabFocus = tabs.length - 1;
   }
