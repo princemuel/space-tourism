@@ -3,33 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
-    <!--
-      <link
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-      />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
       rel="stylesheet"
-      /> -->
+    />
 
     <title>Space Tourism | Home</title>
-    <link rel="stylesheet" href="./styles/index.scss" />
+    <link rel="stylesheet" href="/styles/index.scss" />
   </head>
   <body class="home">
     <a href="#main-content" class="skip-to-content">Skip To Content</a>
     <header class="primary-header flex">
+      <!-- SITE LOGO -->
       <div>
         <img
-          src="./assets/shared/logo.svg"
+          src="/assets/shared/logo.svg"
           alt="space tourism logo"
           class="logo"
         />
       </div>
+
+      <!-- MOBILE TOGGLE -->
       <button
         class="btn--mobile-toggle"
         aria-controls="primary-navigation"
@@ -37,6 +38,8 @@
       >
         <span class="sr-only">Menu</span>
       </button>
+
+      <!-- NAVIGATION -->
       <nav>
         <ul
           id="primary-navigation"
@@ -44,24 +47,28 @@
           data-visible="false"
         >
           <li class="active">
-            <a class="text-white ff-sans-cond ls-2 uppercase" href="index.html"
+            <a
+              class="text-white ff-sans-cond ls-2 uppercase"
+              href="./index.html"
               ><span aria-hidden="true">00</span>Home</a
             >
           </li>
           <li>
             <a
               class="text-white ff-sans-cond ls-2 uppercase"
-              href="destination.html"
+              href="/pages/destination.html"
               ><span aria-hidden="true">01</span>Destination</a
             >
           </li>
           <li>
-            <a class="text-white ff-sans-cond ls-2 uppercase" href="crew.html"
+            <a
+              class="text-white ff-sans-cond ls-2 uppercase"
+              href="/pages/crew.html"
               ><span aria-hidden="true">02</span>Crew</a
             >
           </li>
           <li>
-            <a class="text-white ls-2 uppercase" href="technology.html"
+            <a class="text-white ls-2 uppercase" href="/pages/technology.html"
               ><span aria-hidden="true">03</span>Technology</a
             >
           </li>
