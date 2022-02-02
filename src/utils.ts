@@ -1,6 +1,6 @@
 function hideContent(parent: ParentNode, content: string) {
   parent
-    .querySelectorAll(content)
+    .querySelectorAll(content)!
     .forEach((item) => item.setAttribute('hidden', 'true'));
 }
 

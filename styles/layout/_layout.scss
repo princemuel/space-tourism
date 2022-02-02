@@ -64,6 +64,7 @@
       grid-area: image;
       max-width: 60%;
       @include media('>=45em') {
+        // align-self: start;
         max-width: 90%;
       }
     }
@@ -82,9 +83,11 @@
     --flow-space: 2rem;
     grid-template-areas: 'title' 'image' 'dots' 'content';
     padding-bottom: 0;
+
     @include media('>=35em') {
       grid-template-areas: 'title' 'content' 'dots' 'image';
     }
+
     @include media('>=45em') {
       grid-template-areas:
         '. title title .'
@@ -111,17 +114,84 @@
       max-width: 60%;
       border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
       @include media('>=45em') {
-        max-width: 90%;
+        grid-column: span 2;
+        max-width: 100%;
         align-self: end;
       }
     }
 
     & > .dot-list {
       grid-area: dots;
+      align-self: start;
     }
 
     & > .crew-details {
       grid-area: content;
+    }
+  }
+
+  /*** technology layout ***/
+  &--technology {
+    --flow-space: 1.5rem;
+    grid-template-areas: 'title' 'image' 'numbers' 'content';
+    padding-inline: 0;
+
+    @include media('>=45em') {
+      grid-template-columns:
+        minmax(3.2rem, 1fr) minmax(10rem, 1fr) repeat(2, minmax(0, 56rem))
+        minmax(3.2rem, 1fr);
+
+      grid-template-areas:
+        '. title title .'
+        '. numbers content image'
+        '. numbers content image';
+      align-items: flex-start;
+      justify-items: start;
+      padding-inline: 1.6rem;
+    }
+
+    & > .numbered-title {
+      grid-area: title;
+
+      @include media('>=35em') {
+        padding-inline: 2rem;
+        justify-self: start;
+        margin-block-start: 3.2rem;
+      }
+
+      @include media('>=45em') {
+        padding-inline: 0;
+      }
+    }
+
+    & > picture {
+      grid-area: image;
+      // align-self: start;
+      @include media('>=45em') {
+        // align-self: start;
+        max-width: 100%;
+      }
+    }
+
+    & img {
+      aspect-ratio: 2 / 1;
+    }
+
+    & > .number-list {
+      grid-area: numbers;
+      flex-direction: column;
+    }
+
+    & > .tech-details {
+      grid-area: content;
+      padding-inline: 3em;
+
+      @include media('>=35em') {
+        padding-inline: 6em;
+      }
+      @include media('>=45em') {
+        padding-inline: 0;
+      }
     }
   }
 }

@@ -5,8 +5,10 @@
 }
 
 /*********** FLEX ************/
+
 .flex {
-  @extend %flex;
+  display: flex;
+  gap: var(--gap, 1rem);
 }
 
 .flex-col {
@@ -18,17 +20,18 @@
   outline: 1px solid palevioletred;
 }
 
-// .even-columns {
-//   display: grid;
-//   gap: var(--gap, var(--spacer));
-
-//   @include media('>mid') {
-//     grid-auto-flow: column;
-//     grid-auto-columns: 1fr;
-//   }
-// }
-
 /*********** GRID ************/
 .grid {
-  @extend %grid;
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.even-columns--grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+
+  @include media('>mid') {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }

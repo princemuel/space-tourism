@@ -35,12 +35,13 @@ function changeTabFocus(e: KeyboardEvent) {
 }
 
 function changeTabPanel(e: MouseEvent) {
-  const targetTab = e.target as HTMLButtonElement;
+  // used currentTarget to get the Button itself and not the child spans
+  const targetTab = e.currentTarget as HTMLButtonElement;
   const targetPanel = targetTab.getAttribute('aria-controls')!;
   const targetImage = targetTab.getAttribute('data-image')!;
 
-  const tabContainer = targetTab.parentNode!;
-  const mainContainer = tabContainer.parentNode!;
+  const tabContainer = targetTab.parentElement!;
+  const mainContainer = tabContainer.parentElement!;
 
   tabContainer
     .querySelector('[aria-selected="true"]')!
