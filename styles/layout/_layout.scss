@@ -82,10 +82,10 @@
   &--crew {
     --flow-space: 2rem;
     grid-template-areas: 'title' 'image' 'dots' 'content';
-    padding-bottom: 0;
 
     @include media('>=35em') {
       grid-template-areas: 'title' 'content' 'dots' 'image';
+      padding-bottom: 0;
     }
 
     @include media('>=45em') {
@@ -103,10 +103,6 @@
         justify-self: start;
         margin-block-start: 3.2rem;
       }
-      // @include media('>=35em', '<=44.99em') {
-      //   justify-self: start;
-      //   margin-block-start: 3.2rem;
-      // }
     }
 
     & > picture {
@@ -166,9 +162,7 @@
 
     & > picture {
       grid-area: image;
-      // align-self: start;
       @include media('>=45em') {
-        // align-self: start;
         max-width: 100%;
       }
     }
@@ -179,13 +173,14 @@
 
     & > .number-list {
       grid-area: numbers;
-      flex-direction: column;
+      @include media('>=45em') {
+        flex-direction: column;
+      }
     }
 
     & > .tech-details {
       grid-area: content;
       padding-inline: 3em;
-
       @include media('>=35em') {
         padding-inline: 6em;
       }
