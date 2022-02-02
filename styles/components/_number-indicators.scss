@@ -6,7 +6,7 @@
 
     display: inline-grid;
     place-items: center;
-    @include square(8rem);
+    @include square(2.5em);
     aspect-ratio: 1;
     border: 1px solid hsl(var(--clr-white) / 0.25);
     border-radius: 50%;
