@@ -163,12 +163,15 @@
     & > picture {
       grid-area: image;
       @include media('>=45em') {
-        max-width: 100%;
+        transform: translateX(20%);
       }
     }
 
     & img {
       aspect-ratio: 2 / 1;
+      @include media('>=45em') {
+        aspect-ratio: 1;
+      }
     }
 
     & > .number-list {
