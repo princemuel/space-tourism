@@ -129,6 +129,6 @@ function getElement<T extends Element>(
 ## Author
 
 - Email - [Prince Muel](vansomecsam@gmail.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@pHoeniX-svg](https://www.frontendmentor.io/profile/pHoeniX-svg)
 - Twitter - [@princemuel_cs](https://twitter.com/princemuel_cs)
 - Github - [@pHoeniX-svg](https://github.com/pHoeniX-svg/)
